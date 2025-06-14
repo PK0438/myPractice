@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>RPS</title>
+    <link rel="stylesheet" href="rps.css" />
+</head>
+<body>
+
+    <h1>Rock, Paper, Scissors</h1>
+    <h3 id="nOfGames">Round: </h3>
+
+    <div>
+        <p>Vicky: <span id="player1Choice"></span></p>
+        <p>Pramod: <span id="player2Choice"></span></p>
+        <p>Winner: <span id="winner"></span></p>
+    </div>
+    <div>
+        <p>Vicky Points: <span id="player1Points">0</span></p>
+        <p>Pramod Points: <span id="player2Points">0</span></p>
+    </div>
+        <div style="display: flex; justify-content: center; gap: 10px;">
+        <button id="p1"> Vicky </button>
+        <button id="p2"> Pramod </button>
+        <button id="clear" onclick="clearChoices()"> Clear </button>
+    </div>
+
+    <h2 id="finalWinner"></h2>
+
+    <script src="rps.js"></script>
+</body>
+</html>

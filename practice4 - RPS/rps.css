@@ -1,0 +1,146 @@
+body {
+    background: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #7f53ac;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 12px rgba(127, 83, 172, 0.18);
+}
+
+h3#nOfGames {
+    text-align: center;
+    color: #43cea2;
+    margin-bottom: 2.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+div {
+    max-width: 420px;
+    margin: 1.2rem auto;
+    background: linear-gradient(120deg, rgba(255,255,255,0.98) 60%, rgba(161,140,209,0.12) 100%);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(127, 83, 172, 0.10), 0 1.5px 6px rgba(67,206,162,0.09);
+    padding: 2rem 2.2rem;
+    transition: box-shadow 0.2s;
+}
+
+div:hover {
+    box-shadow: 0 10px 40px rgba(127, 83, 172, 0.18), 0 2px 8px rgba(67,206,162,0.13);
+}
+
+div > p {
+    font-size: 1.15rem;
+    color: #444;
+    margin: 0.7rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+span[id^="player"] {
+    font-weight: bold;
+    color: #43cea2;
+    font-size: 1.1rem;
+}
+
+span#winner {
+    font-weight: bold;
+    color: #f7971e;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+span#player1Points,
+span#player2Points {
+    font-size: 1.3rem;
+    color: #7f53ac;
+}
+
+div[style*="display: flex"] {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 10px rgba(67, 206, 162, 0.10);
+    outline: none;
+    letter-spacing: 1px;
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+    transform: translateY(-3px) scale(1.07);
+    box-shadow: 0 6px 20px rgba(67, 206, 162, 0.18);
+}
+
+#clear {
+    background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+}
+
+#clear:hover, #clear:focus {
+    background: linear-gradient(90deg, #ffd200 0%, #f7971e 100%);
+}
+
+#finalWinner {
+    text-align: center;
+    color: #7f53ac;
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 0 2px 16px rgba(127, 83, 172, 0.13);
+    position: relative;
+    overflow: visible;
+}
+
+#finalWinner.blast-stars::before,
+#finalWinner.blast-stars::after {
+    content: "✨✨✨";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    pointer-events: none;
+    opacity: 0.85;
+    animation: stars-blast 1s ease;
+    width: 100%;
+    text-align: center;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI', Arial, sans-serif;
+}
+
+#finalWinner.blast-stars::before {
+    top: -2.2em;
+}
+
+#finalWinner.blast-stars::after {
+    bottom: -2.2em;
+}
+
+@keyframes stars-blast {
+    0% { opacity: 0; transform: translateX(-50%) scale(0.7);}
+    60% { opacity: 1; transform: translateX(-50%) scale(1.2);}
+    100% { opacity: 0.85; transform: translateX(-50%) scale(1);}
+}
