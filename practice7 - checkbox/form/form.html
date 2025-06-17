@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="title">
+                <h1>Subscription Form</h1>
+            </div>
+            <div class="userInfo">
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname" required>
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="lname" required><br><br>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone: </label>
+                <input type="number" id="phone" name="phone" required><br><br>
+                <label for="address">Address: </label>
+                <input type="text" id="address" name="address" required> <br><br>
+                
+
+                <label>Payment Method: </label>
+                <input type="radio" id="visa" name="paymentType">
+                <label for="visa">Visa </label>
+                <input type="radio" id="masterCard" name="paymentType">
+                <label for="masterCard">Master Card </label>
+                <input type="radio" id="discover" name="paymentType">
+                <label for="discover">Discover </label>
+                <input type="radio" id="paypal" name="paymentType">
+                <label for="paypal">Paypal </label><br><br>
+
+                <input type="checkbox" name="terms" id="terms" required>
+                <label for="terms">By clicking on this you have agreed to our terms and conditions!</label> 
+
+            </div>
+            <div class="submit" style="margin-top: 10px;">
+                <button type="submit" id="submitBtn">Submit</button>
+            </div>
+
+            
+        </form>
+    </div>
+
+
+    <script src="form.js"></script>
+</body>
+</html>
