@@ -65,3 +65,9 @@ console.log("valueOf => ", userName.valueOf()); // Returns the primitive value o
 console.log("toString => ", userName.toString()); // Returns a string representing the specified object.
 
 console.log("charCodeAt => ", userName.charCodeAt(3)); // Returns the UTF-16 code unit at the specified index.
+
+
+
+const email = "kumar213@gmail.com";
+console.log("Username => ", email.substring(0, email.indexOf("@"))); // Extracts the username from an email address.
+console.log("Username => ", email.slice(0, email.indexOf("@")));
