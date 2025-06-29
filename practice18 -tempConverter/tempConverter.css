@@ -1,0 +1,99 @@
+tempConverter.css
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(45, 58, 75, 0.08);
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    display:inline-block;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3a4b;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 25px;
+    color: crimson;
+    text-decoration: solid;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #4a5a6a;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #5b9df9;
+    outline: none;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    background: #f8fafc;
+}
+
+button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #5b9df9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #357ae8;
+}
+
+.result {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2d3a4b;
+    font-weight: 600;
+}
