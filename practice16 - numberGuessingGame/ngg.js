@@ -11,7 +11,8 @@ let guess;
 let running = true;
 
 while(running) {
-    guess = parseInt(prompt(`Guess a number between ${minNum} and ${maxNum}:`));
+    // TODO: uncomment the line below
+    // guess = parseInt(prompt(`Guess a number between ${minNum} and ${maxNum}:`));
 
 if(isNaN(guess)) {
      window.alert("Invalid input! Please enter a valid number!")
