@@ -19,6 +19,8 @@ function cubes(element) {
     return Math.pow(element, 3);
 }
 
+
+//formatting the strings
 const students = ["nICky", "vicKy", "Jay"]
 
 const lowerCaseStudents = students.map(lowerCase);
@@ -41,6 +43,8 @@ function camelCase(element) {
     return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
 }
 
+
+//formatting the string date
 const dates = ["1993-3-29", "1992-9-19", "2019-1-3", "2023-3-13 "]
 
 const formatted = dates.map(formatDates);
