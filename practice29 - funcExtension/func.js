@@ -2,7 +2,11 @@
  * 
  *  function declaration = define a reusable block of code that performs a specific task;
  *  function expression = a way to define function as values or variables. 
- * 
+  * 
+ *      1. Callsbacks in asynchronous operations
+ *      2. Higher-order functions
+ *      3. Closures
+ *      4. Event Listeners
  */
 
 //function delaration
