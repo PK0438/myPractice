@@ -23,4 +23,16 @@ car1.greet();
 car2.greet();
 
 
+function Employee(fName, lName, id, location, isContractor) {
+    this.fName = fName;
+    this.lName = lName;
+    this.id = id;
+    this.location = location;
+    this.isContractor = isContractor;
+}
 
+const emp1 = new Employee("Mahendrs", "Singh", "3827He2", "Dallas, TX", false);
+const emp2 = new Employee("Will", "Smith", "ws745h", "Sacramento, CA", true)
+
+console.log(emp1);
+console.log(emp2);
