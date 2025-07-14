@@ -39,3 +39,24 @@ product3.displayProduct();
 
 console.log(product3);
 
+class Student{
+
+    constructor(fName, lName, grade, isPaid ) {
+        this.fName = fName;
+        this.lName = lName;
+        this.grade = grade;
+        this.isPaid = isPaid;
+    }
+
+    displayStudent() {
+        console.log(
+            "First Name = ", this.fName,
+            ", Last Name = ", this.lName
+        )
+    }
+}
+
+const student1 = new Student("Arjun", "Kumar", 4, true);
+
+console.log(student1);
+student1.displayStudent()
