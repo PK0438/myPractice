@@ -6,6 +6,11 @@
  * * *  * The child class can override the methods of the parent class.
  * 
  * 
+ *  *  super = keyword is used in classes to call the constructor or
+ * *          access the properties and methods of a parent (superclass) class.
+ *            this = this object
+ * *          super = the parent
+ * 
  */
 
  class Animal{
@@ -37,13 +42,13 @@
     name = "cat";
  }
 
- class Fish extends Animal{
+ class Fishes extends Animal{
     name = "fish";
  }
 
 const dog1 = new Dogs();
 const cat1 = new Cats();
-const fish1 = new Fish();
+const fish1 = new Fishes();
 
 cat1.alive = false;
 
@@ -111,11 +116,15 @@ class Pet{
     sleep() {
         console.log(`The pet ${this.name} is ${this.age} years old and is sleeping. `);
     }
+
+    run(speed) {
+        console.log(`The pet ${this.name} is ${this.age} years old and is running with a speed of ${speed} mph`);
+    }
 }
 
 class Dog extends Pet {
     constructor(name, age, breed){
-        super(name, age);
+        super(name, age); // Calls the constructor of the Pet class (parent class)
         this.breed = breed;
     }
 
@@ -125,6 +134,7 @@ class Dog extends Pet {
 
     fetch() {
         console.log(`the dog ${this.name} is fetching the ball.`);
+        super.run(30) // Calls the run method from the Pet class (parent class)
     }
 }
 
@@ -142,15 +152,30 @@ class Cat extends Pet {
     }
 }
 
+class Fish extends Pet {
+    constructor(name, age, swimSpeed){
+        super(name, age);
+        this.swimSpeed = swimSpeed;
+    }
+
+    swim(){
+        super.run(this.swimSpeed)
+    }
+
+}
+
 const myDog = new Dog("Benze", 3, "Labrador");
 const myCat = new Cat("Mittens", 2, "Black");
+const myFish = new Fish("Nemo", 1, 10);
 
 myDog.eat();
 myDog.bark();
+myDog.run(45);
 myDog.fetch();
 myDog.sleep();
 myCat.eat();
 myCat.meow();
 myCat.climb();
 myCat.sleep();
-myCat.bark();  //Throws an error: myCat.bark is not a function at inheritance.js:154:7
+myFish.swim();
+// myCat.bark();  //Throws an error: myCat.bark is not a function at inheritance.js:154:7
