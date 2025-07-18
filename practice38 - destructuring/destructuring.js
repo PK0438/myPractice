@@ -208,3 +208,36 @@ function processOrder(response) {
 }
 
 processOrder(cartApiResponse);
+
+//
+
+class Employee {
+    constructor(id, name, position, salary){
+        this.id = id;
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
+    }
+
+    set salary(value) {
+        if(value >= 0) {
+            this._salary = value
+        } else {
+            console.log("Salary should be a positive number.");
+        }
+    }
+
+    get salary() {
+        return this._salary;
+    }
+}
+
+class AccessCheck extends Employee {
+    constructor(id, name, position, salary, accessLevel){
+        super(id, name, position, salary);
+        this.accessLevel = accessLevel;
+    }
+}
+
+const employee1 = new Employee(1, "Alice", "Developer", 60000);
+console.log(`Employee: ${employee1.name}, Position: ${employee1.position}, Salary: $${employee1.salary}`);
