@@ -1,0 +1,82 @@
+/* Eye-catchy CSS for Shuffle An Array */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+
+select {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    background: #fff;
+    color: #185a9d;
+    margin-right: 15px;
+    box-shadow: 0 2px 8px rgba(24,90,157,0.08);
+    transition: box-shadow 0.2s;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #43cea2;
+}
+
+button#generateBtn {
+    padding: 10px 24px;
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(24,90,157,0.15);
+    transition: background 0.2s, transform 0.1s;
+}
+
+button#generateBtn:hover {
+    background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+#result {
+    margin-top: 40px;
+    min-height: 48px;
+    padding: 18px 32px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(24,90,157,0.10);
+    font-size: 1.3rem;
+    color: #185a9d;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    #result {
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+    button#generateBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
