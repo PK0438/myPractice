@@ -82,6 +82,21 @@ const sixRandomNumbers = pickRandomElements(numbers, 6);
 console.log(sixRandomNumbers);
 
 
+//
+
+let students = ["Rohit", "Anil", "Harsh", "Vinaya", "Suresh", "Priya", "Amit", "Nisha", "Rajesh", "Kiran"];
+
+shuffledStudents(students);
+console.log(students);
+
+function shuffledStudents(array) {
+    for(let i = students.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [array[i], array[randomIndex]] = [array[randomIndex], array[i]]
+    }
+}
+
+
 //program
 
    
