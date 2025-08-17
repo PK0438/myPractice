@@ -10,6 +10,22 @@
 
     <label for="myInput">Enter your name:</label>
     <input type="text" id="myInput" placeholder="Type your name here">
+    <button id="myButton" onclick="printInput()">Print</button>
+  
+
+    <div style="margin: 10px;">
+        <h1 id="counterDisplay">0</h1>
+        <button id="increment" onclick="incrementCounter()">+</button>
+        <button id="reset" onclick="resetCounter()">Reset</button>
+        <button id="decrement" onclick="decrementCounter()">-</button>
+        
+    </div>
+
+    <div style="margin: 10px;"> 
+        <h1 id="displayNum">0</h1>
+        <button id="generateNum" onclick="generateRandomNumber()">Generate Random Number</button>
+        <button id="generateNum" onclick="generateUniqueRandomNumber()">Generate Unique Random Number</button>
+    </div>
 
     <script src="revision.js"></script>
 </body>
