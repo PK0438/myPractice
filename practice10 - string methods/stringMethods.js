@@ -66,7 +66,7 @@ console.log("toString => ", userName.toString()); // Returns a string representi
 
 console.log("charCodeAt => ", userName.charCodeAt(3)); // Returns the UTF-16 code unit at the specified index.
 
-
+console.log("repeat => ", userName.repeat(2)); // Returns a new string with a specified number of copies of the string.
 
 const email = "kumar213@gmail.com";
 console.log("Username => ", email.substring(0, email.indexOf("@"))); // Extracts the username from an email address.

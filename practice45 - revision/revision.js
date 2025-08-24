@@ -174,3 +174,219 @@ switch(day) {
         console.log("Invalid entry");
         break;
 }
+
+  //
+  let phoneNumber = "123-456-7890";
+  phoneNumber = phoneNumber.replaceAll("-", "");
+  console.log(phoneNumber);
+
+  areaCode = phoneNumber.slice(0, 3);
+  console.log(areaCode);
+
+  //
+//   let userName = window.prompt("Enter your name: ");
+
+//   userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+//     console.log(userName);
+
+
+//??
+
+function greetName(name) {
+    const greeting = name || 'Guest';
+    console.log(`Hello, ${greeting}!`);
+}
+
+greetName("Alice"); 
+greetName("");
+greetName(null);
+greetName(undefined);
+
+
+function showMarks(marks) {
+    const message = marks ?? 'absent';
+    console.log(`Marks: ${message}`)
+}
+
+showMarks(90);
+showMarks(0);
+showMarks(null);
+showMarks(undefined);   
+
+//
+// let userNum = window.prompt("Enter a number: ");
+console.log(typeof userNum); // Check the type of userNum
+// if (userNum !== null && userNum !== "") {
+//     // userNum = Number(userNum);
+//     if (isNaN(userNum)) {
+//         console.log("Invalid input. Please enter a valid number.");
+//     } else {
+//         if (userNum % 2 === 0) {
+//             console.log(`${userNum} is even.`);
+//         } else {
+//             console.log(`${userNum} is odd.`);
+//         }
+//     }
+// }
+
+//
+
+let userName;
+
+do {
+    // userName = window.prompt("Enter your name: ");   
+} while (userName === "" || userName === null) ;
+
+console.log(`Hello ${userName}!`);
+
+//
+// let loggedIn = false;
+// let username;
+// let password;
+
+// while (!loggedIn) {
+//     username = window.prompt("Enter your username: ");
+//     password = window.prompt("Enter your password: ");
+
+//     if (username === 'myUsername' && password === 'myPassword') {
+//         loggedIn = true;
+//         console.log("You are logged in!");
+//     } else {
+//         console.log("Invalid credentials. Please try again.");
+//     }
+// }
+
+//
+
+let evenArray = [];
+for(let i = 1; i <= 15; i++) {
+    if (i % 2 === 0) {
+        console.log(`${i} is even.`);
+        evenArray.push(i);
+    }
+}
+console.log("Even numbers:", evenArray);
+
+//
+
+let sum = 0;
+const N = 20; 
+for (let i = 1; i <= N; i++) {
+    sum += i;
+}
+console.log(`The sume of the first ${N} natural numbers is ${sum}.`);
+
+//
+let fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
+
+for(let fruit of fruits) {
+    fruit = fruit.charAt(0).toLowerCase() + fruit.slice(1).toUpperCase();
+    console.log(fruit);
+}
+
+//
+
+let num = 15;
+for(let i = 1; i <= 10; i++) {
+    console.log(`${num} X ${i} = ${num * i}`);
+}
+
+//
+
+for (let i = 1; i <= num; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "*";
+    }
+    console.log(row);
+}
+
+//
+for (let i = num; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "*";
+    }
+    console.log(row);
+}
+
+//
+let arr = [1,2,3,4];
+for (let i = 0; i < arr.length; i++) {
+    arr.pop(); // ❌ may skip elements or behave unexpectedly
+}
+ console.log(arr); // []
+
+//
+for (let i = 1; i <= 5; i++) {
+    if(i ===2) continue;
+    console.log(i);
+}
+
+//
+
+for(let i = 1; i <= 5; i ++) {
+    console.log("*".repeat(i));
+}
+
+for(let i = 5; i >= 1; i--) {
+    console.log("$".repeat(i));
+}
+
+for(let i = 1; i <= 5; i++) {
+    console.log("#".repeat(i).padStart(5));
+}
+
+for(let i = 5; i >= 1; i--) {
+    console.log("@".repeat(i).padStart(5));
+}
+
+for(let i = 1; i <= 5; i++) {
+    console.log("#".repeat(i).padEnd(5));
+}
+
+for(let i = 5; i >= 1; i--) {
+    console.log("@".repeat(i).padEnd(5));
+}
+
+for(let i = 1; i <= 5; i++) {
+    console.log(" ".repeat(5 - i) + "* ".repeat(i));
+}
+
+for(let i = 5; i >= 1; i--) {
+    console.log(" ".repeat(5 - i) + "$ ".repeat(i));
+}
+
+//
+
+let minNum = 1;
+let maxNum = 100;
+let randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+console.log("Random Number (for testing): ", randomNum);
+
+let attempts = 0;
+let guess;
+let running = true;
+
+while(running) {
+     
+    guess = window.prompt(`Guess a number between ${minNum} and ${maxNum}:`)
+    guess = Number(guess);
+
+    if(isNaN(guess)) {
+        window.alert("Please enter a valid number.");
+    } else if (guess <minNum || guess > maxNum) {
+        window.alert(`Please enter a number between ${minNum} and ${maxNum}.`);
+    } else {
+        attempts++;
+        if(guess === randomNum) {
+            window.alert('Congratulations! You guessed the number in ' + attempts + ' attempts.');
+            running = false;
+        } else if(guess < randomNum) {
+            window.alert("Too low! Try again.");
+        } else {
+            window.alert("Too high! Try again.");
+        }
+    }
+
+}
