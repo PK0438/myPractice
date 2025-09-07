@@ -368,25 +368,74 @@ let attempts = 0;
 let guess;
 let running = true;
 
-while(running) {
+// while(running) {
      
-    guess = window.prompt(`Guess a number between ${minNum} and ${maxNum}:`)
-    guess = Number(guess);
+//     guess = window.prompt(`Guess a number between ${minNum} and ${maxNum}:`)
+//     guess = Number(guess);
 
-    if(isNaN(guess)) {
-        window.alert("Please enter a valid number.");
-    } else if (guess <minNum || guess > maxNum) {
-        window.alert(`Please enter a number between ${minNum} and ${maxNum}.`);
-    } else {
-        attempts++;
-        if(guess === randomNum) {
-            window.alert('Congratulations! You guessed the number in ' + attempts + ' attempts.');
-            running = false;
-        } else if(guess < randomNum) {
-            window.alert("Too low! Try again.");
-        } else {
-            window.alert("Too high! Try again.");
-        }
-    }
+//     if(isNaN(guess)) {
+//         window.alert("Please enter a valid number.");
+//     } else if (guess <minNum || guess > maxNum) {
+//         window.alert(`Please enter a number between ${minNum} and ${maxNum}.`);
+//     } else {
+//         attempts++;
+//         if(guess === randomNum) {
+//             window.alert('Congratulations! You guessed the number in ' + attempts + ' attempts.');
+//             running = false;
+//         } else if(guess < randomNum) {
+//             window.alert("Too low! Try again.");
+//         } else {
+//             window.alert("Too high! Try again.");
+//         }
+//     }
+
+// }
+
+//
+let nums = [34, 67, 23, 89, 2, 45, 90];
+console.log("Max => ", Math.max(...nums));
+console.log("Min => ", Math.min(...nums));
+
+//
+let animals = ['cat', 'dog', 'elephant', 'bee', 'ant'];
+
+animals = ['horse', ...animals, 'zebra'];
+console.log(animals.sort());
+
+//
+function avarageOfNums(a, b, c) {
+    return (a + b + c) / 3;
+}
+
+let scores = [90, 85, 88];
+console.log("Avarage Score => ", avarageOfNums(...scores));
+
+//rest operator
+
+function printFoods(...foods){
+    console.log("Foods: ", foods);
+    console.log("Foods: ", ...foods);
+}
+
+let food1 = "Pizza";
+let food2 = "Burger";   
+let food3 = "Pasta";
+
+printFoods(food1, food2, food3);
+
+//
+let a = 25;
+let b = 20;
+
+// Swap without using a temporary variable
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log("a => ", a);
+console.log("b => ", b);
+
+//
+function greet(name) {
 
 }
