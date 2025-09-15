@@ -29,8 +29,8 @@ for (let i = 1; i <= 10; i++) {
 console.log(5 ** 2) // 25   
 console.log(9 / 3) // 3
 console.log(10 % 3) // 1
-let n = 10
-console.log(n += 23)
+let m = 10
+console.log(m += 23)
 
 //
 let favSport;
@@ -47,10 +47,13 @@ function printInput() {
 }
 
 // 
-let x = "0";
+let x = ""; // Use empty string to demonstrate falsy value
 
-x =  Boolean(x); // Converts string to number, if possible
-console.log(x);
+x = Boolean(x); // Converts to boolean, empty string is falsy
+console.log(x); // Output: false
+
+let y = 0; // Use number 0 to demonstrate falsy value
+console.log(Boolean(y)); // Output: false
 
 //circumference of circle
 
@@ -436,6 +439,44 @@ console.log("a => ", a);
 console.log("b => ", b);
 
 //
-function greet(name) {
+let lang = "python"
+console.log(lang[1]);
 
+//spread operator
+
+let numbers = [1,2,3,4,5];
+let newNumbers = [...numbers, 6, 7, 8]
+
+let maxNumber = Math.max(...newNumbers);
+console.log("Max Number => ", maxNumber);
+
+//
+let pLang = "javascript";
+let charArray = [...pLang].join("-");
+console.log(charArray);
+
+//rest operator
+
+function openFridge(...foods) {
+    console.log(...foods);
 }
+
+let food_1 = 'Milk';
+let food_2 = 'Eggs';
+let food_3 = 'Butter';
+openFridge(food_1, food_2, food_3, "rice");
+
+//
+function sumAll(...numbers) {
+    let result = 0;
+    for(let number of numbers) {
+        result += number;
+    }
+    return result;
+}
+
+let total = sumAll(1,2,3,4,5);
+console.log("Total => ", total);
+
+total = sumAll(10,20,30);
+console.log("Total => ", total);    
