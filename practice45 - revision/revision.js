@@ -480,3 +480,55 @@ console.log("Total => ", total);
 
 total = sumAll(10,20,30);
 console.log("Total => ", total);    
+
+//
+
+function avarage(...scores) {
+    let avg = 0;
+    for(let score of scores) {
+        avg = avg + score;
+    }
+    avg = avg / scores.length;
+    return avg;
+}
+
+const avarageScores = avarage(90, 85, 88, 92, 95);
+console.log("Avarage Scores => ", avarageScores);
+
+//
+function combineStrings(...strings) {
+    return strings.join(" ");
+}
+
+let fullName = combineStrings("Mr.", "John", "Doe");
+console.log(fullName);
+
+//generateRandomPassword
+
+function generatePassword(length, useUppercase, useLowercase, useNumbers, useSymbols) {  
+    const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lower = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
+    let allChars = "";
+    if (useUppercase) allChars += upper;
+    if (useLowercase) allChars += lower;
+    if (useNumbers) allChars += numbers;
+    if (useSymbols) allChars += symbols;    
+    if (allChars === "") {
+        return "Please select at least one character type.";
+    }
+    let password = "";
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * allChars.length);
+        password += allChars[randomIndex];  
+    }
+    return password;  
+    }
+
+const password = generatePassword(12, true, true, true, true);
+console.log("Generated Password => ", password);
+
+
+//callbacks
+
